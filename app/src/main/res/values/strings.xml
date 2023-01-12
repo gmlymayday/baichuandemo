@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">标准版Demo</string>
+    <string name="open_type">打开方式</string>
+    <string name="open_auto">Auto</string>
+    <string name="open_native">Native</string>
+    <string name="link_type">唤端类型</string>
+    <string name="link_taobao">淘宝</string>
+    <string name="link_tianmao">天猫</string>
+    <string name="fail_mode">失败模式</string>
+    <string name="mode_h5">h5</string>
+    <string name="mode_download">download</string>
+    <string name="mode_browser">browser</string>
+    <string name="mode_none">none</string>
+    <string name="global_param">全局参数</string>
+    <string name="taoke_sync">同步淘客打点</string>
+    <string name="global_taoke_param">全局淘客参数</string>
+    <string name="e_commerce">电商接口</string>
+    <string name="enable_taoke_param">使用淘客参数</string>
+    <string name="set_track_param">设置跟踪参数</string>
+    <string name="track_param">跟踪参数</string>
+    <string name="set_taoke_param">设置淘客参数</string>
+    <string name="taoke_param">淘客参数</string>
+    <string name="login">登录</string>
+    <string name="logout">登出</string>
+    <string name="query_login_status">查询登录态</string>
+    <string name="open_by_url">通过url打开</string>
+    <string name="open_by_code">通过code打开</string>
+    <string name="open_by_webview">通过自定义webview打开页面</string>
+    <!--    <string name="app_name">BaichuanTestApplication</string>-->
+</resources>

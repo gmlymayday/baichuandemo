@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.demo">
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParamEditActivity"
+            android:exported="false" />
+
+        <!--    覆盖SDK中的组件，增加android:exported配置    -->
+        <receiver android:name="com.alibaba.baichuan.trade.biz.login.LoginBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="NOTIFY_LOGIN_SUCCESS" />
+                <action android:name="NOTIFY_LOGIN_FAILED" />
+                <action android:name="NOTIFY_LOGIN_CANCEL" />
+                <action android:name="NOTIFY_LOGOUT" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:exported="true"
+            android:name="com.alibaba.alibclinkpartner.smartlink.ALPEntranceActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" >
+            <intent-filter>
+                <action android:name="com.alibaba.intent.action.GETWAY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="linkpartner"
+                    android:pathPrefix="/entrance"
+                    android:scheme="tbopen" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

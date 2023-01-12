@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/global_param"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+        <Switch
+            android:id="@+id/taoke_sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/taoke_sync"/>
+        <Switch
+            android:id="@+id/global_taoke_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/global_taoke_param"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="@string/e_commerce"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/open_type" />
+
+        <RadioGroup
+            android:id="@+id/open_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/open_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/open_auto" />
+
+            <RadioButton
+                android:id="@+id/open_native"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_native" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/link_type" />
+
+        <RadioGroup
+            android:id="@+id/link_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/link_taobao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/link_taobao" />
+
+            <RadioButton
+                android:id="@+id/link_tianmao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link_tianmao" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/fail_mode" />
+
+        <RadioGroup
+            android:id="@+id/fail_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mode_h5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mode_h5"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/mode_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mode_download" />
+
+            <RadioButton
+                android:id="@+id/mode_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mode_browser" />
+
+            <RadioButton
+                android:id="@+id/mode_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mode_none" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/set_track_param"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_track_param"/>
+
+    <EditText
+        android:id="@+id/track_param"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/track_param"/>
+
+    <Button
+        android:id="@+id/set_taoke_param"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set_taoke_param"/>
+
+    <EditText
+        android:id="@+id/taoke_param"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/taoke_param"/>
+
+
+    <Switch
+        android:layout_marginBottom="10dp"
+        android:id="@+id/enable_taoke_param"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_taoke_param"
+        android:checked="true"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout" />
+
+    <Button
+        android:id="@+id/isLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/query_login_status" />
+
+    <Button
+        android:id="@+id/open_by_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_by_url" />
+
+    <Button
+        android:id="@+id/open_by_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_by_code" />
+
+    <Button
+        android:id="@+id/open_by_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_by_webview" />
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

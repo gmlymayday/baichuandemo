@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.example.demo"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('../keystore')
+            storePassword '123456'
+            keyAlias 'keystore'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('../keystore')
+            storePassword '123456'
+            keyAlias 'keystore'
+            keyPassword '123456'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+repositories {
+    flatDir {
+        dirs 'libs', '../libs'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    // 2个jar包
+    // mtopsdk_allinone_open-3.1.22-opt.jar
+    // utdid4all-1.5.3_proguard.jar
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //安全问题更新aar
+    implementation(name: 'app-monitor-sdk-2.6.4.13_for_bc', ext: 'aar')
+
+    // 登陆
+    implementation(name: 'alibabauth_core-2.0.0.12', ext: 'aar')
+    implementation(name: 'alibabauth_ui-2.0.0.12', ext: 'aar')
+    implementation(name: 'alibabauth_ext-2.0.0.12', ext: 'aar')
+    // 安全保镖
+    implementation(name: 'MiscSDK-external-release-5.5.9-preInstall', ext: 'aar')
+    implementation(name: 'NoCaptchaSDK-external-release-5.5.8-preInstall', ext: 'aar')
+    implementation(name: 'MiddleTierSDK-external-release-5.5.85-preInstall', ext: 'aar')
+    implementation(name: 'SecurityBodySDK-external-release-5.5.98-preInstall', ext: 'aar')
+    implementation(name: 'SecurityGuardSDK-external-release-5.5.92-preInstall', ext: 'aar')
+    // applink
+    implementation(name: 'alibc_link_partner-4.1.29', ext: 'aar')
+    // 电商基础组件
+//    implementation(name: 'AlibcTradeCommon-4.0.0.27', ext: 'aar')
+//    implementation(name: 'AlibcTradeBiz-4.0.0.27', ext: 'aar')
+//    implementation(name: 'nb_trade-4.0.0.27', ext: 'aar')
+
+    implementation(name: 'AlibcTradeCommon-4.1.0.3', ext: 'aar')
+    implementation(name: 'AlibcTradeBiz-4.1.0.3', ext: 'aar')
+    implementation(name: 'nb_trade-4.1.0.3', ext: 'aar')
+
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+
+}
